@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+</style>
+</head>
+
+<body>
+
+<h1>Welcome to Ikea</h1>
+
+<div class="gallery">
+  <a target="_blank" href=“alex-drawer-unit-with-drawers-white__0085835_PE213729_S4.jpg>
+    <img src="alex-drawer-unit-with-drawers-white__0085835_PE213729_S4.jpg" alt=“ALEX Drawer unit with 9 drawers, white” width="300" height="200">
+  </a>
+  <div class="desc"> ALEX Drawer unit with 9 drawers, white <br> $129<br><br></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="0311276_PE407127_S3.jpg">
+    <img src="0311276_PE407127_S3.jpg" alt="HAMPDÅN Pillow, firmer" width="600" height="400">
+  </a>
+  <div class="desc">HAMPDÅN Pillow, firmer <br> $4.99<br><br></div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="angslilja-duvet-cover-and-pillowcase-s-white__0459607_PE606215_S4.jpg">
+    <img src="angslilja-duvet-cover-and-pillowcase-s-white__0459607_PE606215_S4.jpg" alt="ÄNGSLILJA Duvet cover and pillowcase(s), white" width="600" height="400">
+  </a>
+  <div class="desc">ÄNGSLILJA Duvet cover and pillowcase(s), white <br> $39.99</div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<h2>List</h2>
+
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Price</th>
+    <th>Quantity</th>
+  </tr>
+  <tr>
+    <td>ALEX Drawer unit with 9 drawers, white</td>
+    <td>$129</td>
+    <td><input id="inputA" placeholder="Enter number"  value="1" type="text"></td>
+  </tr>
+  <tr>
+    <td>HAMPDÅN Pillow, firmer</td>
+    <td>$4.99</td>
+    <td><input id="inputB" placeholder="Enter number"  value="1" type="text"></td> 
+  </tr>
+  <tr>
+    <td>ÄNGSLILJA Duvet cover and pillowcase(s), white</td>
+    <td>$39.99</td>
+    <td><input id="inputC" placeholder="Enter number"  value="1" type="text"></td>
+  </tr>
+  <tr>
+     <td> </td>
+     <td>Total: </td>
+     <td><p id="total_in_table"> </p></td>
+   </tr>
+</table>
+
+<p id="show_total">To calculate the total</p>
+ <button onclick="getInputValues()">Click to calculate the total</button>
+
+<script>
+function getInputValues() {
+   var x=document.getElementById('inputA').value;
+   var y=document.getElementById('inputB').value;
+   var z=document.getElementById('inputC').value;
+   var sub_total= Math.round(x*129+y*4.99+z*39.99)
+   document.getElementById("total_in_table").innerHTML = sub_total;
+}
+</script>
+
+
+<br>
+
+<hr>
+
+<p id="demo">Place your order below</p>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Congratulations! Your order has been placed"'>Click to order</button>
+
+
+<br>
+<br>
+
+<hr>
+<address>
+Written by Lucy Guo
+</address>
+
+</body>
+</html>
